@@ -32,7 +32,7 @@ class FlutterQiblahPlugin() : FlutterPlugin, MethodCallHandler {
             // Check whether the device supports the TYPE_ROTATION_VECTOR sensor
             "androidSupportSensor" -> {
                 val sensorManager = context?.getSystemService(Context.SENSOR_SERVICE) as SensorManager
-                val sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR) ?: null
+                val sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
                 result.success(sensor != null)
             }
             else -> result.notImplemented()
